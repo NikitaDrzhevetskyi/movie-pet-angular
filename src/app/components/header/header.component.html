@@ -1,0 +1,20 @@
+<!-- <mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.open()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a mat-button><mat-icon>rrr</mat-icon></a>
+  <a mat-button><mat-icon>rrr</mat-icon></a>
+  <a mat-button><mat-icon>rrr</mat-icon></a>
+</mat-toolbar> -->
+
+<mat-toolbar color="primary">
+  <span class="header__logo" routerLink="all-movies">Movie App</span>
+  <div class="center-links">
+    <div class="example-button-row">
+      <button mat-flat-button routerLink="favorites" class="favorites">
+        Favorite
+      </button>
+      <button mat-flat-button routerLink="watch-list">Watch List</button>
+    </div>
+  </div>
+</mat-toolbar>

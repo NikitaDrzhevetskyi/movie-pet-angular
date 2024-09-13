@@ -1,0 +1,27 @@
+<div class="movies">
+  <div class="favorites">
+    <h2>Favorites</h2>
+    <div *ngFor="let favorite of favoriteList" class="card-item">
+      <div>{{ favorite }}</div>
+    </div>
+  </div>
+
+  <div class="watch-list">
+    <h2>Watch List</h2>
+    <div *ngFor="let watch of watchList" class="card-item">
+      <div>{{ watch }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="movie__list">
+  <div *ngFor="let movie of movieData" class="movie__item">
+    <app-movie-card
+      [date]="movie"
+      (addFavorites)="handleAddToFavorites(movie.title)"
+      (addWatchList)="handleAddToWatchList(movie.title)"
+      (removeFavorites)="handleRemoveFromFavorites(movie.title)"
+      (removeWatchList)="handleRemoveFromWatchList(movie.title)"
+    ></app-movie-card>
+  </div>
+</div>

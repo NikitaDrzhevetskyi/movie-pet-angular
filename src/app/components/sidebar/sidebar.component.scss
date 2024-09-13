@@ -1,0 +1,19 @@
+.sidenav-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-content {
+  width: 250px; 
+  overflow: hidden;
+}
+
+mat-sidenav-content {
+  flex: 1;
+  padding-top: headerHeight; 
+}
+
+.main-content {
+  padding: 16px; 
+}

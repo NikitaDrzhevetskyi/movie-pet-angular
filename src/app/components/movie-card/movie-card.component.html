@@ -1,0 +1,76 @@
+<mat-card class="movie-card" appearance="outlined">
+  <div class="movie-image-container">
+    <img
+      mat-card-image
+      [src]="movie.poster"
+      [alt]="movie.title"
+      class="movie-image"
+    />
+  </div>
+  <mat-card-actions class="movie__actions">
+    <div>
+      <button
+        class="watch-list-btn"
+        (click)="addToWatchList()"
+        (mouseover)="onHover('bookmark')"
+        (mouseout)="onLeave('bookmark')"
+      >
+        <img
+          [src]="
+            isBookmarked
+              ? filledBookmarkSvg
+              : isHoveringBookmark
+              ? hoverBookmarkSvg
+              : bookmarkEmptySvg
+          "
+          [alt]="
+            isBookmarked
+              ? 'Filled Bookmark'
+              : isHoveringBookmark
+              ? 'Hover Bookmark'
+              : 'Empty Bookmark'
+          "
+          matTooltip="watch-list"
+        />
+      </button>
+    </div>
+    <div>
+      <button
+        class="favorite-btn"
+        (click)="addToFavorites()"
+        (mouseover)="onHover('heart')"
+        (mouseout)="onLeave('heart')"
+        matTooltip="favorites"
+      >
+        <img
+          [src]="
+            isFavorite
+              ? filledHeartSvg
+              : isHoveringHeart
+              ? hoverHeartSvg
+              : heartEmptySvg
+          "
+          [alt]="
+            isFavorite
+              ? 'Filled Heart'
+              : isHoveringHeart
+              ? 'Hover Heart'
+              : 'Empty Heart'
+          "
+        />
+      </button>
+    </div>
+
+    <div>
+      <button class="play-button">
+        <img [src]="playButtonSvg" [alt]="playButtonSvg" />
+        <p>Watch</p>
+      </button>
+    </div>
+  </mat-card-actions>
+
+  <mat-card-content class="card-content">
+    <h4>{{ movie.title }}</h4>
+    <p>{{ movie.year }}, {{ movie.genre[0] }}</p>
+  </mat-card-content>
+</mat-card>

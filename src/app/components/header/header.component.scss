@@ -1,0 +1,22 @@
+.header__logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+a {
+  text-decoration: none;
+}
+
+.center-links {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.center-links a {
+  margin: 0 10px;
+}
+.favorites{
+	margin-right: 10px;
+}
