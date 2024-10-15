@@ -1,0 +1,7 @@
+<section class="favorite-list">
+  @if(favoriteList.length <= 0){
+  <h1>No favorite movies yet((</h1>
+  }@else {
+  <app-movie-list [movies]="favoriteList"></app-movie-list>
+  }
+</section>

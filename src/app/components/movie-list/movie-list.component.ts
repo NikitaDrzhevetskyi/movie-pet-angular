@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { CommonModule } from '@angular/common';
-import { IMovieCard } from '../../interfaces/movie.interface';
-import { movies } from '../../mock-data/movies-data';
+import { IMovie } from '../../interfaces/movie.interface';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { allMovies } from '../../mock-data/movies-data';
 
 @Component({
   selector: 'app-movie-list',
@@ -13,27 +13,5 @@ import { MatGridListModule } from '@angular/material/grid-list';
   styleUrls: ['./movie-list.component.scss'],
 })
 export class MovieListComponent {
-  public movieData: IMovieCard[] = movies;
-  public favoriteList: string[] = [];
-  public watchList: string[] = [];
-
-  handleAddToFavorites(title: string): void {
-    //console.log(this.movieData);
-    if (!this.favoriteList.includes(title)) {
-      this.favoriteList.push(title);
-    }
-  }
-
-  handleAddToWatchList(title: string): void {
-    if (!this.watchList.includes(title)) {
-      this.watchList.push(title);
-    }
-  }
-
-  handleRemoveFromFavorites(title: string): void {
-    this.favoriteList = this.favoriteList.filter((fav) => fav !== title);
-  }
-  handleRemoveFromWatchList(title: string): void {
-    this.watchList = this.watchList.filter((fav) => fav !== title);
-  }
+  @Input() movies!: IMovie[];
 }

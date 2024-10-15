@@ -10,6 +10,8 @@ import { TransformTimePipe } from '../../pipes/transform-time.pipe';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { IMovie } from '../../interfaces/movie.interface';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -39,32 +41,23 @@ export class MovieCardComponent implements OnInit {
   public hoverBookmarkSvg: string = 'assets/icons/bookmark-hover.svg';
   public hoverHeartSvg: string = 'assets/icons/heart-hover.svg';
 
-  @Input() date: any;
-  @Output() addFavorites = new EventEmitter<any>();
-  @Output() addWatchList = new EventEmitter<any>();
-  @Output() removeFavorites = new EventEmitter<any>();
-  @Output() removeWatchList = new EventEmitter<any>();
+  constructor(private movieService: MovieService) {}
+
+  @Input() date!: IMovie;
 
   ngOnInit(): void {
     this.movie = this.date;
+    this.isBookmarked = this.movieService.isInWatchList(this.movie);
+    this.isFavorite = this.movieService.isInFavoriteList(this.movie);
   }
 
-  addToWatchList(): void {
+  setWatchList(): void {
+    this.movieService.setWatchList(this.movie);
     this.isBookmarked = !this.isBookmarked;
-    if (this.isBookmarked) {
-      this.addWatchList.emit(this.movie.title);
-    } else {
-      this.removeWatchList.emit(this.movie.title);
-    }
   }
-
-  addToFavorites(): void {
+  setFavoriteList(): void {
+    this.movieService.setFavoriteList(this.movie);
     this.isFavorite = !this.isFavorite;
-    if (this.isFavorite) {
-      this.addFavorites.emit(this.movie.title);
-    } else {
-      this.removeFavorites.emit(this.movie.title);
-    }
   }
 
   onHover(iconType: 'bookmark' | 'heart'): void {

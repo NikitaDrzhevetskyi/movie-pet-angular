@@ -1,22 +1,4 @@
-export const allMovies = [
-  {
-    poster: 'assets/images/wolf-wall-street.jpg',
-    title: 'The Wolf of Wall Street',
-    genre: ['crime', 'drama', 'comedy'],
-    year: 2018,
-    country: 'USA',
-    rating: 8.2,
-    actors: [
-      'Cristin Milioti',
-      'Matthew McConaughey',
-      'Jon Bernthal',
-      'Zineb Oukach',
-      'JTO Connor',
-    ],
-    duration: 180,
-    description:
-      "A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort's autobiography.",
-  },
+export const topRatedMovies = [
   {
     poster: 'assets/images/inception.jpg',
     title: 'Inception',
@@ -178,5 +160,23 @@ export const allMovies = [
     duration: 180,
     description:
       'Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book.',
+  },
+  {
+    poster: 'assets/images/wolf-wall-street.jpg',
+    title: 'The Wolf of Wall Street',
+    genre: ['crime', 'drama', 'comedy'],
+    year: 2018,
+    country: 'USA',
+    rating: 8.2,
+    actors: [
+      'Cristin Milioti',
+      'Matthew McConaughey',
+      'Jon Bernthal',
+      'Zineb Oukach',
+      'JTO Connor',
+    ],
+    duration: 180,
+    description:
+      "A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort's autobiography.",
   },
 ];

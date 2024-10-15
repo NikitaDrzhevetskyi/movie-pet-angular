@@ -5,13 +5,8 @@ import { MatCardModule } from '@angular/material/card';
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [
-    MatGridListModule,
-    MatCardModule,
-  ],
+  imports: [MatGridListModule, MatCardModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
-export class FooterComponent {
-  cards = Array.from({ length: 20 }, (_, i) => i + 1);
-}
+export class FooterComponent {}

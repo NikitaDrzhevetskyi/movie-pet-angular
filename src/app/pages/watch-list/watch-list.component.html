@@ -1,1 +1,7 @@
-<p>watch-list page works!</p>
+<section class="watch-list">
+  @if(watchList.length > 0){
+  <app-movie-list [movies]="watchList"></app-movie-list>
+  }@else {
+  <h1>No movies In Watch List((</h1>
+  }
+</section>

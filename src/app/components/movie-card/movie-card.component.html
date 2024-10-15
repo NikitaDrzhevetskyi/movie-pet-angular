@@ -11,9 +11,9 @@
     <div>
       <button
         class="watch-list-btn"
-        (click)="addToWatchList()"
         (mouseover)="onHover('bookmark')"
         (mouseout)="onLeave('bookmark')"
+        (click)="setWatchList()"
       >
         <img
           [src]="
@@ -37,9 +37,9 @@
     <div>
       <button
         class="favorite-btn"
-        (click)="addToFavorites()"
         (mouseover)="onHover('heart')"
         (mouseout)="onLeave('heart')"
+        (click)="setFavoriteList()"
         matTooltip="favorites"
       >
         <img

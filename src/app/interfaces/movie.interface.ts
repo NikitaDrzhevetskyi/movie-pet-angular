@@ -1,4 +1,4 @@
-export interface IMovieCard {
+export interface IMovie {
   poster: string;
   title: string;
   genre: string[];
