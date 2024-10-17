@@ -3,29 +3,52 @@ import { MovieListComponent } from '../../components/movie-list/movie-list.compo
 import { MovieService } from '../../services/movie.service';
 import { ActivatedRoute } from '@angular/router';
 import { IMovie } from '../../interfaces/movie.interface';
-import { allMovies } from '../../mock-data/movies-data';
-import { popularMovies } from '../../mock-data/popular-movies';
-import { topRatedMovies } from '../../mock-data/top-rated-movies';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MovieCardComponent } from '../../components/movie-card/movie-card.component';
+import { CurrencyPipe } from '@angular/common';
+import { MatTableModule } from '@angular/material/table';
+import { MatCommonModule } from '@angular/material/core';
+import { MatIcon } from '@angular/material/icon';
+import { TransformTimePipe } from '../../pipes/transform-time.pipe';
 
 @Component({
   selector: 'app-movie-details-page',
   standalone: true,
-  imports: [MovieListComponent],
+  imports: [
+    MovieListComponent,
+    MatCardModule,
+    MatButtonModule,
+    MovieCardComponent,
+    MatTableModule,
+    CurrencyPipe,
+    MatCommonModule,
+    MatIcon,
+    TransformTimePipe,
+  ],
   templateUrl: './movie-details-page.component.html',
   styleUrls: ['./movie-details-page.component.scss'],
 })
-export class MovieDetailsPage implements OnInit {
-  allMovies = [...allMovies, ...popularMovies, ...topRatedMovies];
-  findedMovieDetails: any;
+export class MovieDetailsPage {
+  public movie!: IMovie | undefined;
 
-  constructor(private route: ActivatedRoute) {}
+  public playButtonSvg: string = 'assets/icons/play.svg';
+  public bookmarkEmptySvg: string = 'assets/icons/bookmark-filled.svg';
+
+  constructor(
+    private route: ActivatedRoute,
+    private movieService: MovieService
+  ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      const movieTitle = params['title'];
-      this.findedMovieDetails = this.allMovies.find(
-        (el) => el.title === movieTitle
-      );
-    });
+    const routeParams = this.route.snapshot.paramMap;
+    const movieIdFromRoute = Number(routeParams.get('movieId'));
+
+    const movie = this.movieService.getMovieById(movieIdFromRoute);
+    if (movie) {
+      this.movie = movie;
+    } else {
+      console.error('Movie not found');
+    }
   }
 }

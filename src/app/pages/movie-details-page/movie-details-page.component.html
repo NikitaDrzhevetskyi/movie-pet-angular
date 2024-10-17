@@ -1,0 +1,30 @@
+<section class="detail-page">
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <div class="movie-poster">
+        <img [src]="movie?.poster" alt="{{ movie?.title }}" />
+      </div>
+      <div class="movie-info">
+        <mat-card-title>{{ movie?.title }}</mat-card-title>
+        <mat-card-subtitle>{{ movie?.genre }}</mat-card-subtitle>
+        <mat-card-subtitle
+          >{{ movie?.year }}, {{ movie?.country }}</mat-card-subtitle
+        >
+        <mat-card-subtitle>Actors: {{ movie?.actors }}</mat-card-subtitle>
+        <mat-card-subtitle>Rating: {{ movie?.rating }}</mat-card-subtitle>
+        <mat-card-subtitle>
+          Durartion: {{ movie?.duration ?? 0 | timePipe }}
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <button mat-flat-button class="button-play">
+            <img [src]="playButtonSvg" [alt]="playButtonSvg" />
+            <span>Watch movie</span>
+          </button>
+        </mat-card-actions>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      {{ movie?.description }}
+    </mat-card-content>
+  </mat-card>
+</section>

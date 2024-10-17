@@ -61,4 +61,7 @@ export class MovieService {
   isInFavoriteList(movie: IMovie): boolean {
     return this.favoriteList.some((m) => m.title === movie.title);
   }
+  getMovieById(id: number): IMovie | undefined {
+    return allMovies.find((movie) => movie.id === id);
+  }
 }

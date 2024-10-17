@@ -15,7 +15,7 @@ export const routes: Routes = [
   { path: 'popular', component: MoviesPopularPage },
   { path: 'top-rating', component: MoviesTopRatingPage },
 
-  { path: 'movie/title', component: MovieDetailsPage },
+  { path: 'movie/:movieId', component: MovieDetailsPage },
   { path: 'favorites', component: FavoritesPage },
   { path: 'watch-list', component: WatchListPage },
 

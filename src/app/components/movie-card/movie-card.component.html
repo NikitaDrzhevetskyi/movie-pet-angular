@@ -62,7 +62,7 @@
     </div>
 
     <div>
-      <button class="play-button">
+      <button class="play-button" [routerLink]="['/movie', movie.id]">
         <img [src]="playButtonSvg" [alt]="playButtonSvg" />
         <p>Watch</p>
       </button>

@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { IMovie } from '../../interfaces/movie.interface';
 import { MovieService } from '../../services/movie.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-movie-card',
@@ -23,6 +24,7 @@ import { MovieService } from '../../services/movie.service';
     MatButtonModule,
     TransformTimePipe,
     MatTooltipModule,
+	RouterLink
   ],
 })
 export class MovieCardComponent implements OnInit {

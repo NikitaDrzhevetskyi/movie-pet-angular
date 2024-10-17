@@ -1,5 +1,6 @@
 export const popularMovies = [
   {
+    id: 3,
     poster: 'assets/images/green-book.jpg',
     title: 'Green Book',
     genre: ['crime', 'drama', 'comedy'],
@@ -18,6 +19,7 @@ export const popularMovies = [
       'Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book.',
   },
   {
+    id: 3,
     poster: 'assets/images/green-book.jpg',
     title: 'Green Book',
     genre: ['crime', 'drama', 'comedy'],
@@ -36,6 +38,7 @@ export const popularMovies = [
       'Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book.',
   },
   {
+    id: 3,
     poster: 'assets/images/green-book.jpg',
     title: 'Green Book',
     genre: ['crime', 'drama', 'comedy'],
@@ -54,6 +57,7 @@ export const popularMovies = [
       'Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book.',
   },
   {
+    id: 3,
     poster: 'assets/images/green-book.jpg',
     title: 'Green Book',
     genre: ['crime', 'drama', 'comedy'],
@@ -72,6 +76,7 @@ export const popularMovies = [
       'Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book.',
   },
   {
+    id: 3,
     poster: 'assets/images/green-book.jpg',
     title: 'Green Book',
     genre: ['crime', 'drama', 'comedy'],
@@ -90,6 +95,7 @@ export const popularMovies = [
       'Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book.',
   },
   {
+    id: 3,
     poster: 'assets/images/green-book.jpg',
     title: 'Green Book',
     genre: ['crime', 'drama', 'comedy'],
@@ -108,6 +114,7 @@ export const popularMovies = [
       'Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book.',
   },
   {
+    id: 3,
     poster: 'assets/images/green-book.jpg',
     title: 'Green Book',
     genre: ['crime', 'drama', 'comedy'],
@@ -126,24 +133,7 @@ export const popularMovies = [
       'Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book.',
   },
   {
-    poster: 'assets/images/green-book.jpg',
-    title: 'Green Book',
-    genre: ['crime', 'drama', 'comedy'],
-    year: 2018,
-    country: 'USA',
-    rating: 4,
-    actors: [
-      'Cristin Milioti',
-      'Matthew McConaughey',
-      'Jon Bernthal',
-      'Zineb Oukach',
-      'JTO Connor',
-    ],
-    duration: 180,
-    description:
-      'Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book.',
-  },
-  {
+    id: 1,
     poster: 'assets/images/wolf-wall-street.jpg',
     title: 'The Wolf of Wall Street',
     genre: ['crime', 'drama', 'comedy'],
@@ -162,9 +152,10 @@ export const popularMovies = [
       "A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort's autobiography.",
   },
   {
+    id: 2,
     poster: 'assets/images/inception.jpg',
     title: 'Inception',
-    genre: ['action', 'mystery,', 'thriller'],
+    genre: ['action', 'mystery', 'thriller'],
     year: 2010,
     country: 'USA',
     rating: 8.8,

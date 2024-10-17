@@ -10,9 +10,9 @@ export class TransformTimePipe implements PipeTransform {
     const minutes = value % 60;
     console.log(minutes);
     if (minutes === 0) {
-      return `${hours}h`;
+      return `${hours}hours`;
     }
 
-    return `${hours}h :${minutes}m`;
+    return `${hours}hh :${minutes}mm`;
   }
 }
